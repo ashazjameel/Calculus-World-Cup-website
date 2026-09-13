@@ -3,11 +3,6 @@
 	  src: url("TeXMath.otf");
 }
 
-.light-mode {
-	background-color: #FFFFFF;
-	color: #000000;
-}
-
 .dark-mode {
 	background-color: #323338;
 	color: #FFFFFF;
