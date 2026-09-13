@@ -4,5 +4,7 @@
 }
 
 .title {
+	font-size: 140px;
 	font-family: "TeXMath";
+	text-align: center;
 }
