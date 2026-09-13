@@ -1,10 +1,10 @@
 @font-face {
     font-family: "TeXMath";
-	  src: url(TeXMath.otf) format("truetype");
+	  src: url("TeXMath.otf");
 }
 
 .title {
-	font-size: 140px;
+	font-size: 15vh;
 	font-family: "TeXMath";
 	text-align: center;
 }
