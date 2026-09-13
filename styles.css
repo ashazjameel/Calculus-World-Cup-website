@@ -4,8 +4,9 @@
 }
 
 .title {
-	font-size: 15vh;
 	font-family: "TeXMath";
+	font-size: 15vh;
+	font-weight: 100;
 	text-align: center;
 	user-select: none;
 }
