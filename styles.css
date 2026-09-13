@@ -2,3 +2,7 @@
     font-family: "TeXMath";
 	  src: url(TeXMath.otf) format("truetype");
 }
+
+.title {
+	font-family: "TeXMath";
+}
