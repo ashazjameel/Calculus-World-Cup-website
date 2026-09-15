@@ -23,6 +23,7 @@
 	height: 40px;
 	width: 40px;
 	border: none;
+	border-radius: 8px;
 }
 
 .title {
