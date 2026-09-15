@@ -8,12 +8,21 @@
 	color: #FFFFFF;
 }
 
+.light-button {
+	background-color: #494a4f;
+}
+
+.dark-button {
+	background-color: #ffffff;
+}
+
 #lightButton {
 	position: absolute;
 	top: 20px;
 	right: 30px;
 	height: 40px;
 	width: 40px;
+	border: none;
 }
 
 .title {
