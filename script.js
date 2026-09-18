@@ -3,3 +3,7 @@ function lightDark() {
   document.getElementById("lightButton").classList.toggle("light-button");
   document.getElementById("lightButton").classList.toggle("dark-button");
 }
+
+function fetchData {
+  fetch("/api/test");
+}
