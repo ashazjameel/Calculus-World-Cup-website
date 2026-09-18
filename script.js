@@ -5,5 +5,6 @@ function lightDark() {
 }
 
 function fetchData {
-  fetch("/api/test");
+  fetch("/api/test")
+    .then(response => alert(response));
 }
