@@ -4,7 +4,7 @@ function lightDark() {
   document.getElementById("lightButton").classList.toggle("dark-button");
 }
 
-function fetchData {
+function fetchData() {
   fetch("/api/test")
     .then(response => alert(response));
 }
