@@ -12,5 +12,5 @@ def home():
 def test():
   return render_template("not_index.html")
 
-if __name__ == "__main__":
-  app.run(debug=True)
+#if __name__ == "__main__":
+#  app.run(debug=True)
