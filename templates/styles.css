@@ -1,6 +1,6 @@
 @font-face {
     font-family: TeXMath;
-	  src: url("assets/TeXMath.otf");
+	  src: url("TeXMath.otf");
 }
 
 .dark-mode {
