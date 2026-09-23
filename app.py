@@ -29,6 +29,9 @@ def login_google():
 def authorize_google():
     token = google.authorize_access_token()
     userinfo_endpoint = google.server_metadata["userinfo_endpoint"]
+    resp = google.get(userinfo_endpoint)
+    user_info = resp.json()
+    username = user_info["email"]
 
 if __name__ == "__main__":
     app.run(debug=True)
