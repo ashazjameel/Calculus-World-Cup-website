@@ -3,6 +3,7 @@ from authlib.integrations.flask_client import OAuth
 import os
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 oauth = OAuth(app)
 google = oauth.register(
     name="google",
