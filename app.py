@@ -19,7 +19,7 @@ def home():
 @app.route("/login/google")
 def login_google():
     try:
-        redirect_uri = url_for("authorize",_external=True)
+        redirect_uri = url_for("authorize_google",_external=True)
         return google.authorize_redirect(redirect_uri)
     except Exception as e:
         app.logger.error(f"Error during login: {str(e)}")
