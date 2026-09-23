@@ -25,10 +25,10 @@ def login_google():
         app.logger.error(f"Error during login: {str(e)}")
         return "Error during login", 500
 
-@app.route("/authorise/google")
-def authorise_google():
-    pass
-    #^edit ts
+@app.route("/authorize/google")
+def authorize_google():
+    token = google.authorize_access_token()
+    userinfo_endpoint = google.server_metadata["userinfo_endpoint"]
 
 if __name__ == "__main__":
     app.run(debug=True)
