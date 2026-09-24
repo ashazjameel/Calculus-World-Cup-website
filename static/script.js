@@ -1,5 +1,12 @@
 function lightDark() {
-  document.body.classList.toggle("dark-mode");
-  document.getElementById("lightButton").classList.toggle("light-button");
-  document.getElementById("lightButton").classList.toggle("dark-button");
+    const lightButton = document.getElementById("lightButton");
+    document.body.classList.toggle("dark-mode");
+    lightButton.classList.toggle("light-button");
+    lightButton.classList.toggle("dark-button");
+  
+    if (lightButton.innerHTML == "☼") {
+        lightButton.innerHTML = "☾"
+    } else {
+        lightButton.innerHTML = "☼"
+    }
 }
