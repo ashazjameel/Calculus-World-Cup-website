@@ -28,8 +28,10 @@
 
 #google-login {
 	position: absolute;
+	left: 50%;
 	height: 50px;
-	width: 100px;
+	width: 200px;
+	transform: translate(-50%,0);
 }
 
 .title {
