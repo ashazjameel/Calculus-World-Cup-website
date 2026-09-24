@@ -18,10 +18,8 @@
 
 #lightButton {
 	position: absolute;
-	top: 20px;
-	right: 30px;
-	height: 40px;
-	width: 40px;
+	top: 20px; right: 30px;
+	height: 40px; width: 40px;
 	border: none;
 	border-radius: 8px;
 }
@@ -39,9 +37,9 @@
 
 #google-login img {
 	position: absolute;
-	left: 0;
+	top: 50%; left: 0;
 	width: 20px;
-	transform: translate(-50%,0);
+	transform: translate(-50%,-50%);
 }
 
 .title {
