@@ -30,7 +30,7 @@
 }
 
 #google-login button {
-	height: 50px; width: 300px;
+	height: 8vh; width: 30vw;
 	transform: translate(-50%, 0);
 }
 
