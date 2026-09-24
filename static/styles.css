@@ -38,7 +38,10 @@
 }
 
 #google-login img {
+	position: absolute;
+	left: 0;
 	width: 20px;
+	transform: translate(-50%,0);
 }
 
 .title {
