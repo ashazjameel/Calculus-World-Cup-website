@@ -41,6 +41,12 @@
 	transform: translate(calc(-50% - 110px), -50%);
 }
 
+#register-text {
+	font: TeXMath;
+	font-size: 50px;
+	text-align: center;
+}
+
 .title {
 	font-family: TeXMath;
 	font-size: 8vw;
