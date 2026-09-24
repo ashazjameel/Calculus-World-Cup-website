@@ -13,11 +13,12 @@ body {
 }
 
 .light-button {
-	background-color: #5f6063;
+	background-color: #5F6063;
+	color: #FFFFFF;
 }
 
 .dark-button {
-	background-color: #ffffff;
+	background-color: #FFFFFF;
 }
 
 #lightButton {
