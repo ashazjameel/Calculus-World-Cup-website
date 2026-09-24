@@ -48,7 +48,6 @@ body {
 #register-text {
 	position: absolute;
 	bottom: 50px;
-	font: TeXMath;
 	font-size: 50px;
 	transform: translate(-50%,0);
 }
