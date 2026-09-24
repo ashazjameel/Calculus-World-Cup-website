@@ -26,6 +26,12 @@
 	border-radius: 8px;
 }
 
+#google-login {
+	position: absolute;
+	height: 50px;
+	width: 100px;
+}
+
 .title {
 	font-family: TeXMath;
 	font-size: 8vw;
