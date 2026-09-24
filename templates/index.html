@@ -12,7 +12,10 @@
     <body>
 		<h1 class="title">ℂ𝕒𝕝𝕔𝕦𝕝𝕦𝕤 𝕎𝕠𝕣𝕝𝕕 ℂ𝕦𝕡</h1>
 		<button id="lightButton" class="light-button" type="button" onclick="lightDark()"></button>
-		<button id="google-login" type="button" onclick="window.location.href = '{{ url_for('login_google') }}'">
+		<div id="google-login">
+			<button type="button" onclick="window.location.href = '{{ url_for('login_google') }}'"></button>
+			<img src="https://developers.google.com/identity/images/g-logo.png">
+		</div>
 		<p style="text-align:center; font-size:50px; font:TeXMath; margin-top:25%;"> Coming soon... </p>
     </body>
 </html>
