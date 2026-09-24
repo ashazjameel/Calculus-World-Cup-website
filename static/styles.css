@@ -37,8 +37,8 @@
 #google-login img {
 	position: absolute;
 	top: 50%; left: 0;
-	width: 20px;
-	transform: translate(calc(-50% - 110px), -50%);
+	width: 4vh;
+	transform: translate(calc(100% - 15vw), -50%);
 }
 
 #register-text {
