@@ -42,9 +42,11 @@
 }
 
 #register-text {
+	position: absolute;
+	bottom: 50px;
 	font: TeXMath;
 	font-size: 50px;
-	text-align: center;
+	transform: translate(-50%,0);
 }
 
 .title {
