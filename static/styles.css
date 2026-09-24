@@ -1,6 +1,10 @@
 @font-face {
     font-family: TeXMath;
-	  src: url("TeXMath.otf");
+	src: url("TeXMath.otf");
+}
+
+body {
+	font-family: TeXMath;
 }
 
 .dark-mode {
@@ -50,7 +54,6 @@
 }
 
 .title {
-	font-family: TeXMath;
 	font-size: 8vw;
 	font-weight: 100;
 	text-align: center;
