@@ -26,19 +26,19 @@
 
 #google-login {
 	position: absolute;
-	left: 50%;
+	top: 80%; left: 50%;
 }
 
 #google-login button {
-	height: 50px; width: 200px;
-	transform: translate(-50%,0);
+	height: 50px; width: 300px;
+	transform: translate(-50%, 0);
 }
 
 #google-login img {
 	position: absolute;
 	top: 50%; left: 0;
 	width: 20px;
-	transform: translate(calc(-50% - 70px),-50%);
+	transform: translate(calc(-50% - 110px), -50%);
 }
 
 .title {
