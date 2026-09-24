@@ -26,9 +26,12 @@
 	border-radius: 8px;
 }
 
-#google-login button {
+#google-login {
 	position: absolute;
 	left: 50%;
+}
+
+#google-login button {
 	height: 50px;
 	width: 200px;
 	transform: translate(-50%,0);
