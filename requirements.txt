@@ -2,3 +2,4 @@ flask
 gunicorn
 Authlib
 requests
+flask_sqlalchemy
