@@ -38,6 +38,7 @@ def authorize_google():
     resp = google.get(userinfo_endpoint)
     user_info = resp.json()
     email = user_info["email"]
+    uuid = user_info["sub"]
     return user_info# test code
 
 if __name__ == "__main__":
