@@ -39,6 +39,8 @@ def authorize_google():
     user_info = resp.json()
     email = user_info["email"]
     uuid = user_info["sub"]
+
+    supa_resp = supabase.auth.sign_up({"email":email})
     return user_info# test code
 
 if __name__ == "__main__":
