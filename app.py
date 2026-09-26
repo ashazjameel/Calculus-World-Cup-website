@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
+from supabase import create_client, Client
 import os
 
 app = Flask(__name__)
@@ -13,8 +14,8 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
-#app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY =  os.environ.get("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY")
 
 #db = SQLAlchemy(app)
 
