@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
-from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
@@ -14,10 +13,10 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+#app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
+#app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 @app.route('/')
 def home():
