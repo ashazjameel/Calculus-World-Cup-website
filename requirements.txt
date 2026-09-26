@@ -2,4 +2,4 @@ flask
 gunicorn
 Authlib
 requests
-pymongo
+supabase
