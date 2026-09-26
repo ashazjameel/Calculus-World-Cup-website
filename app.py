@@ -37,8 +37,8 @@ def authorize_google():
     userinfo_endpoint = google.server_metadata["userinfo_endpoint"]
     resp = google.get(userinfo_endpoint)
     user_info = resp.json()
-    username = user_info["email"]
-    return token#user_info# test code
+    email = user_info["email"]
+    return user_info# test code
 
 if __name__ == "__main__":
     app.run(debug=True)
