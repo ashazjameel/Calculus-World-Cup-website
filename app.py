@@ -16,8 +16,7 @@ google = oauth.register(
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL")
 SUPABASE_KEY =  os.environ.get("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY")
-
-#db = SQLAlchemy(app)
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.route('/')
 def home():
