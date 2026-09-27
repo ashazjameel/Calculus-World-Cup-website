@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
-from supabase import create_client, Client
+import firebase_admin
+from firebase_admin import db, credentials
 import os
 
 app = Flask(__name__)
