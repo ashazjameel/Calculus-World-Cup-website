@@ -40,8 +40,13 @@ def authorize_google():
     email = user_info["email"]
     uuid = user_info["sub"]
 
-    supa_resp = supabase.auth.sign_up({"email":email})
-    return user_info# test code
+    try:
+        supa_resp = supabase.table("User Data").Select("*").execute()#supabase.auth.sign_up({"email":email})
+    except Exception as e:
+        app.logger.error(f"Error with supabase: {str(e)}")
+        return "Error with database", 500
+        
+    return supa_resp#user_info# test code
 
 if __name__ == "__main__":
     app.run(debug=True)
