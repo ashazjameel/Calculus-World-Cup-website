@@ -14,7 +14,7 @@ google = oauth.register(
     server_metadata_url="https://accounts.google.com/.well-known/openid-configuration",
     client_kwargs = {"scope":"openid profile email"}
 )
-"""
+
 firebaseConfig = {
   apiKey="AIzaSyBJ0fS9hKXYXSPpXU3uhOOmUsn-pHZEHM8",
   authDomain="calculus-world-cup.firebaseapp.com",
@@ -23,7 +23,7 @@ firebaseConfig = {
   storageBucket="calculus-world-cup.firebasestorage.app",
   messagingSenderId="1095708660529",
   appId="1:1095708660529:web:c498bbc7993da2694e1610",
-  measurementId="G-L83DKYLSNH"}"""
+  measurementId="G-L83DKYLSNH"}
 
 @app.route('/')
 def home():
