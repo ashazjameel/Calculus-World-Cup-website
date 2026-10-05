@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
 import firebase_admin
-from firebase_admin import db, credentials
+from pyrebase
 import os
 
 app = Flask(__name__)
@@ -15,16 +15,21 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-firebaseConfig = (
-  apiKey="AIzaSyBJ0fS9hKXYXSPpXU3uhOOmUsn-pHZEHM8",
-  authDomain="calculus-world-cup.firebaseapp.com",
-  databaseURL="https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId="calculus-world-cup",
-  storageBucket="calculus-world-cup.firebasestorage.app",
-  messagingSenderId="1095708660529",
-  appId="1:1095708660529:web:c498bbc7993da2694e1610",
-  measurementId="G-L83DKYLSNH"
-)
+firebaseConfig = {
+  "apiKey": "AIzaSyBJ0fS9hKXYXSPpXU3uhOOmUsn-pHZEHM8",
+  "authDomain": "calculus-world-cup.firebaseapp.com",
+  "databaseURL": "https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
+  "projectId": "calculus-world-cup",
+  "storageBucket": "calculus-world-cup.firebasestorage.app",
+  "messagingSenderId": "1095708660529",
+  "appId": "1:1095708660529:web:c498bbc7993da2694e1610",
+  "measurementId": "G-L83DKYLSNH"
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+db = firebase.database()
+db.child("test").child("data")
+auth = firebase.auth()
 
 @app.route('/')
 def home():
@@ -47,6 +52,7 @@ def authorize_google():
     user_info = resp.json()
     email = user_info["email"]
     uuid = user_info["sub"]
+    user = auth.create_user_with_email
 
     try:
         pass
