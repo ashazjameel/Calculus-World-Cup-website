@@ -28,8 +28,10 @@ firebaseConfig = {
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
-db.child("test").child("data")
 auth = firebase.auth()
+
+data = {"name": "ntheesh"}
+db.child("test").push(data)
 
 @app.route('/')
 def home():
