@@ -31,7 +31,7 @@ db = firebase.database()
 auth = firebase.auth()
 
 data = {"name": "ntheesh"}
-db.child("test").push(data)
+db.push(data)
 
 @app.route('/')
 def home():
