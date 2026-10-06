@@ -30,9 +30,6 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
 auth = firebase.auth()
 
-data = {"name": "ntheesh"}
-db.push(data)
-
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -55,6 +52,8 @@ def authorize_google():
     email = user_info["email"]
     uuid = user_info["sub"]
     user = auth.create_user_with_email
+    data = {"name": "ntheesh"}
+    db.push(data)
 
     try:
         pass
