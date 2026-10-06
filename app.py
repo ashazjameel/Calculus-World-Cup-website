@@ -16,14 +16,14 @@ google = oauth.register(
 )
 
 firebaseConfig = {
-  "apiKey": "AIzaSyBJ0fS9hKXYXSPpXU3uhOOmUsn-pHZEHM8",
-  "authDomain": "calculus-world-cup.firebaseapp.com",
+  "apiKey": "AIzaSyC400bVkh_c0gVf7DhBBNHpUOCdhBlalZ4",
+  "authDomain": "calculus-world-cup-bb810.firebaseapp.com",
   "databaseURL": "https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
-  "projectId": "calculus-world-cup",
-  "storageBucket": "calculus-world-cup.firebasestorage.app",
-  "messagingSenderId": "1095708660529",
-  "appId": "1:1095708660529:web:c498bbc7993da2694e1610",
-  "measurementId": "G-L83DKYLSNH"
+  "projectId": "calculus-world-cup-bb810",
+  "storageBucket": "calculus-world-cup-bb810.firebasestorage.app",
+  "messagingSenderId": "123071097251",
+  "appId": "1:123071097251:web:51640c9ab25347fa925216",
+  "measurementId": "G-VNHWWS02DJ"
 }
 
 firebase = pyrebase.initialize_app(firebaseConfig)
