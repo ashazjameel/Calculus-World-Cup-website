@@ -15,7 +15,7 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-firebaseConfig = {
+"""firebaseConfig = {
   "apiKey": "AIzaSyC400bVkh_c0gVf7DhBBNHpUOCdhBlalZ4",
   "authDomain": "calculus-world-cup-bb810.firebaseapp.com",
   "databaseURL": "https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
@@ -28,7 +28,7 @@ firebaseConfig = {
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
-auth = firebase.auth()
+auth = firebase.auth()"""
 
 @app.route('/')
 def home():
