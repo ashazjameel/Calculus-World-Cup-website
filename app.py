@@ -62,7 +62,7 @@ def authorize_google():
         app.logger.error(f"Error with supabase: {str(e)}")
         return "Error with database", 500
         
-    return render_template('index.html')#user_info# test code
+    return render_template('main.html')#user_info# test code
 
 if __name__ == "__main__":
     app.run(debug=True)
