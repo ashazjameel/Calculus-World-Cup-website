@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
 import firebase_admin
-import pyrebase
+#import pyrebase
 import os
 
 app = Flask(__name__)
