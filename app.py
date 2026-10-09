@@ -51,7 +51,7 @@ def authorize_google():
     user_info = resp.json()
     email = user_info["email"]
     uuid = user_info["sub"]
-    user = auth.create_user_with_email
+    #user = auth.create_user_with_email
     data = {"name": "ntheesh"}
     #db.push(data)             temp
 
