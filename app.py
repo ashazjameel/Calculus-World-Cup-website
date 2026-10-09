@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
+from firebase import firebase
 import firebase_admin
-#import pyrebase
 import os
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-"""firebaseConfig = {
+firebaseConfig = {
   "apiKey": "AIzaSyC400bVkh_c0gVf7DhBBNHpUOCdhBlalZ4",
   "authDomain": "calculus-world-cup-bb810.firebaseapp.com",
   "databaseURL": "https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
@@ -26,9 +26,9 @@ google = oauth.register(
   "measurementId": "G-VNHWWS02DJ"
 }
 
-firebase = pyrebase.initialize_app(firebaseConfig)
-db = firebase.database()
-auth = firebase.auth()"""
+firebase = firebase.FirebaseApplication("https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app", None)
+#db = firebase.database()
+#auth = firebase.auth()
 
 @app.route('/')
 def home():
