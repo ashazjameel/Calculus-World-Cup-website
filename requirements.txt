@@ -3,4 +3,4 @@ gunicorn
 Authlib
 requests
 firebase_admin
-Pyrebase4
+firebase
