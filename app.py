@@ -27,7 +27,7 @@ firebaseConfig = {
 }
 
 firebase = firebase.FirebaseApplication("https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app", None)
-#db = firebase.database()
+db = firebase.database()
 #auth = firebase.auth()
 
 @app.route('/')
@@ -53,7 +53,7 @@ def authorize_google():
     uuid = user_info["sub"]
     #user = auth.create_user_with_email
     data = {"name": "ntheesh"}
-    #db.push(data)             temp
+    db.push(data)#             temp
 
     try:
         pass
