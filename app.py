@@ -1,7 +1,6 @@
 from flask import Flask, render_template, url_for
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
-import firebase_admin
 import os
 
 app = Flask(__name__)
@@ -16,7 +15,6 @@ google = oauth.register(
 )
 
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
-#auth = firebase.auth()
 
 @app.route('/')
 def home():
@@ -39,7 +37,7 @@ def authorize_google():
     user_info = resp.json()
     email = user_info["email"]
     uuid = user_info["sub"]
-    #user = auth.create_user_with_email
+
     data = {"name": "ntheesh"}
     test_data = firebaseApp.post("/test", data)#             temp
 
@@ -50,7 +48,7 @@ def authorize_google():
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
-    return render_template('main.html')#user_info# test code
+    return user_info#render_template('main.html')#user_info
 
 if __name__ == "__main__":
     app.run(debug=True)
