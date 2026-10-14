@@ -52,7 +52,7 @@ def authorize_google():
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
-    return user_info#render_template('main.html')#user_info
+    return render_template('main.html')    #user_info
 
 if __name__ == "__main__":
     app.run(debug=True)
