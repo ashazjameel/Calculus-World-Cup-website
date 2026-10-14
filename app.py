@@ -51,8 +51,7 @@ def authorize_google():
 
     data = {"email": email,
            "first_name": fname,
-           "last_name": lname,
-           "uuid": uuid}
+           "last_name": lname}
 
     try:
         user_ref = ref.child("users")
