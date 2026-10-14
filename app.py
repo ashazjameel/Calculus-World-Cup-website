@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, session
+from flask import Flask, render_template, url_for, session, redirect
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
 import os
@@ -17,7 +17,7 @@ google = oauth.register(
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 
 @app.route('/')
-def home():
+def unlogged():
     return render_template('index.html')
 
 @app.route("/login/google")
@@ -39,6 +39,7 @@ def authorize_google():
     fname = user_info["given_name"]
     lname = user_info["family_name"]
     uuid = user_info["sub"]
+    session["user"] = uuid
 
     data = {"email": email,
            "first_name": fname,
@@ -52,7 +53,11 @@ def authorize_google():
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
-    return render_template('main.html')    #user_info
-
+    return redirect(url_for("home"))
+    
+@app.route("/home")
+def home():
+    render_template('main.html')    #user_info
+    
 if __name__ == "__main__":
     app.run(debug=True)
