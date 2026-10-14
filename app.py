@@ -15,17 +15,6 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-firebaseConfig = {
-  "apiKey": "AIzaSyC400bVkh_c0gVf7DhBBNHpUOCdhBlalZ4",
-  "authDomain": "calculus-world-cup-bb810.firebaseapp.com",
-  "databaseURL": "https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app",
-  "projectId": "calculus-world-cup-bb810",
-  "storageBucket": "calculus-world-cup-bb810.firebasestorage.app",
-  "messagingSenderId": "123071097251",
-  "appId": "1:123071097251:web:51640c9ab25347fa925216",
-  "measurementId": "G-VNHWWS02DJ"
-}
-
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 #auth = firebase.auth()
 
@@ -58,7 +47,7 @@ def authorize_google():
         pass
         #supa_resp = supabase.auth.sign_in_with_oauth({"provider": "google", "token":token})#email})
     except Exception as e:
-        app.logger.error(f"Error with supabase: {str(e)}")
+        app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
     return render_template('main.html')#user_info# test code
