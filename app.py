@@ -20,7 +20,7 @@ google = oauth.register(
 cred = credentials.Certificate(json.loads(os.environ.get("FIREBASE_JSON")))
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/"})
-ref = db.reference("test")
+ref = db.reference("users")
 
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 
