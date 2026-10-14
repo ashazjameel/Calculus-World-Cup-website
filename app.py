@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, session, redirect
+from flask import Flask, render_template, url_for, session, redirect, jsonify
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
 import firebase_admin
@@ -16,7 +16,7 @@ google = oauth.register(
     client_kwargs = {"scope":"openid profile email"}
 )
 
-cred = credentials.Certificate(os.environ.get("FIREBASE_JSON"))
+cred = credentials.Certificate(jsonifyt(os.environ.get("FIREBASE_JSON")))
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/"})
 ref = db.reference("test")
