@@ -57,7 +57,7 @@ def authorize_google():
     
 @app.route("/home")
 def home():
-    render_template('main.html')    #user_info
+    return render_template('main.html')    #user_info
     
 if __name__ == "__main__":
     app.run(debug=True)
