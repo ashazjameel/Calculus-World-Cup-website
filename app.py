@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, session
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
 import os
