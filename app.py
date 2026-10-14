@@ -36,14 +36,18 @@ def authorize_google():
     resp = google.get(userinfo_endpoint)
     user_info = resp.json()
     email = user_info["email"]
+    fname = user_info["given_name"]
+    lname = user_info["family_name"]
     uuid = user_info["sub"]
 
-    data = {"name": "ntheesh"}
-    test_data = firebaseApp.post("/test", data)#             temp
+    data = {"email": email,
+           "first_name": fname,
+           "last_name": lname,
+           "uuid": uuid}
+    test_data = firebaseApp.post("/user", data)#             temp
 
     try:
         pass
-        #supa_resp = supabase.auth.sign_in_with_oauth({"provider": "google", "token":token})#email})
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
