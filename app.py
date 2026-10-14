@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, session, redirect
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
+from firabase_admin import db
 import os
 
 app = Flask(__name__)
@@ -13,6 +14,11 @@ google = oauth.register(
     server_metadata_url="https://accounts.google.com/.well-known/openid-configuration",
     client_kwargs = {"scope":"openid profile email"}
 )
+
+cred = os.environ.get("FIREBASE_JSON")
+firebase_admin.initialize_app(cred, {
+    "databaseURL": "https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/"})
+ref = db.reference("test")
 
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 
