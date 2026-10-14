@@ -57,7 +57,7 @@ def authorize_google():
 
     try:
         user_ref = ref.child("stuff")
-        stuff.set(test_data)
+        user_ref.set(test_data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
