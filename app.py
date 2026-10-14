@@ -56,7 +56,7 @@ def authorize_google():
     test_data = firebaseApp.post("/users", data)
 
     try:
-        user_ref = ref.child("/stuff")
+        user_ref = ref.child("stuff")
         stuff.set(test_data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
