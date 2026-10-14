@@ -26,7 +26,7 @@ firebaseConfig = {
   "measurementId": "G-VNHWWS02DJ"
 }
 
-firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-default-rtdb.europe-west1.firebasedatabase.app", None)
+firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 #auth = firebase.auth()
 
 @app.route('/')
