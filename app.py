@@ -53,12 +53,11 @@ def authorize_google():
            "first_name": fname,
            "last_name": lname,
            "uuid": uuid}
-    test_data = firebaseApp.post("/users", data)#             temp
-    user_ref = ref.child("stuff")
-    stuff.set(test_data)
+    test_data = firebaseApp.post("/users", data)
 
     try:
-        pass
+        user_ref = ref.child("stuff")
+        stuff.set(test_data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
