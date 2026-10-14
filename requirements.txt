@@ -2,5 +2,4 @@ flask
 gunicorn
 Authlib
 requests
-firebase_admin
 firebase
