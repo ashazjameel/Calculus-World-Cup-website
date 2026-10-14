@@ -54,6 +54,8 @@ def authorize_google():
            "last_name": lname,
            "uuid": uuid}
     test_data = firebaseApp.post("/users", data)#             temp
+    user_ref = ref.child("stuff")
+    stuff.set(test_data)
 
     try:
         pass
