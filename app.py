@@ -53,7 +53,6 @@ def authorize_google():
            "first_name": fname,
            "last_name": lname,
            "uuid": uuid}
-    return firebaseApp.get("/user","test")
     test_data = firebaseApp.post("/user", data)#             temp
 
     try:
