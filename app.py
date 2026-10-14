@@ -20,7 +20,7 @@ google = oauth.register(
 cred = credentials.Certificate(json.loads(os.environ.get("FIREBASE_JSON")))
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/"})
-ref = db.reference("test")
+ref = db.reference("/test")
 
 firebaseApp = firebase.FirebaseApplication("https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/", None)
 
@@ -56,7 +56,7 @@ def authorize_google():
     test_data = firebaseApp.post("/users", data)
 
     try:
-        user_ref = ref.child("stuff")
+        user_ref = ref.child("/stuff")
         stuff.set(test_data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
