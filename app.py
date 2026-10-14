@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, session, redirect
 from authlib.integrations.flask_client import OAuth
 from firebase import firebase
+import firebase_admin
 from firebase_admin import db
 import os
 
