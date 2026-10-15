@@ -57,7 +57,7 @@ def authorize_google():
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
-    return redirect(url_for("home", name=fname))
+    return redirect(url_for("home"))
     
 @app.route("/home")
 def home(name):
