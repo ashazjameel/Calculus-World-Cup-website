@@ -60,8 +60,8 @@ def authorize_google():
     return redirect(url_for("home"))
     
 @app.route("/home")
-def home():
-    return render_template('main.html')    #user_info
+def home(name):
+    return render_template('main.html', name=name)
     
 if __name__ == "__main__":
     app.run(debug=True)
