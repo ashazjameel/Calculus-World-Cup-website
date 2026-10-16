@@ -20,6 +20,7 @@ cred = credentials.Certificate(json.loads(os.environ.get("FIREBASE_JSON")))
 firebase_admin.initialize_app(cred, {
     "databaseURL": "https://calculus-world-cup-bb810-default-rtdb.europe-west1.firebasedatabase.app/"})
 ref = db.reference()
+user_ref = ref.child("users")
 
 @app.route('/')
 def unlogged():
@@ -51,7 +52,6 @@ def authorize_google():
            "last_name": lname}
 
     try:
-        user_ref = ref.child("users")
         user_ref.child(uuid).set(data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
@@ -61,7 +61,7 @@ def authorize_google():
     
 @app.route("/home/<uuid>")
 def home(first_name):
-    temp = ref.get(uuid)
+    temp = user_ref.get(uuid)
     return render_template('main.html', name=uuid)#first_name)
     
 if __name__ == "__main__":
