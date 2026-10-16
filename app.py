@@ -62,6 +62,7 @@ def authorize_google():
 @app.route("/home/<uuid>")
 def home(uuid):
     user = user_ref.child(uuid).get()
+    app.logger.info(session)
     if temp:
         app.logger.info(f"User with uuid:{uuid}, info:{temp}")
     else:
