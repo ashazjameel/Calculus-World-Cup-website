@@ -66,7 +66,9 @@ def home(uuid):
         app.logger.info(f"User with uuid:{uuid}, info:{temp}")
     else:
         app.logger.error(f"Error: User doesn't exist")
-    return render_template('main.html', name=user["first_name"])#first_name)
+        return "User not found", 404
+        
+    return render_template('main.html', name=user["first_name"])
     
 if __name__ == "__main__":
     app.run(debug=True)
