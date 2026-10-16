@@ -60,7 +60,7 @@ def authorize_google():
     return redirect(url_for("home", uuid=uuid))
     
 @app.route("/home/<uuid>")
-def home(first_name):
+def home(uuid):
     temp = user_ref.get(uuid)
     return render_template('main.html', name=uuid)#first_name)
     
