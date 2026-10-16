@@ -62,9 +62,12 @@ def authorize_google():
 @app.route("/home/<uuid>")
 def home(uuid):
     user = user_ref.child(uuid).get()
-    app.logger.info(session)
-    if temp:
-        app.logger.info(f"User with uuid:{uuid}, info:{temp}")
+    try:
+        app.logger.info(session)
+    except Exception as e:
+        app.logger.error(f"Error!: {str(e)}")
+    if user:
+        app.logger.info(f"User with uuid:{uuid}, info:{user}")
     else:
         app.logger.error(f"Error: User doesn't exist")
         return "User not found", 404
