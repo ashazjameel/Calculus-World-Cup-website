@@ -59,7 +59,7 @@ def authorize_google():
         
     return redirect(url_for("home", first_name=fname))
     
-@app.route("/home")
+@app.route("/home/<first_name>")
 def home(first_name):
     return render_template('main.html', name=first_name)
     
