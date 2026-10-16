@@ -62,7 +62,10 @@ def authorize_google():
 @app.route("/home/<uuid>")
 def home(uuid):
     temp = user_ref.child(uuid)
-    app.logger.info(f"uuid:{uuid}, stuff:{temp}")
+    if temp:
+        app.logger.info(f"uuid:{uuid}, stuff:{temp}")
+    else:
+        app.logger.error(f"error with user")
     return render_template('main.html', name=uuid)#first_name)
     
 if __name__ == "__main__":
