@@ -75,4 +75,4 @@ def home(uuid):
     return render_template('main.html', name=user["first_name"])
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()#debug=True)
