@@ -25,7 +25,7 @@ user_ref = ref.child("users")
 @app.route('/')
 def unlogged():
     if "user" in session:
-        return redirect(url_for("home", uuid=session["user"]))
+        return redirect(url_for("home"))
     return render_template('index.html')
 
 @app.route("/login/google")
@@ -59,10 +59,17 @@ def authorize_google():
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
         
-    return redirect(url_for("home", uuid=uuid))
+    return redirect(url_for("home"))
     
-@app.route("/home/<uuid>")
-def home(uuid):
+@app.route("/home")
+def home():
+    if "user" in session:
+        uuid = session["user"]
+    else:
+        app.logger.error(f"Error: User not logged in")
+        return redirect(url_for("unlogged"))
+
+    
     user = user_ref.child(uuid).get()
     app.logger.info(f"session: {session}")
     
