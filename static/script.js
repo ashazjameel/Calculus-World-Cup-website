@@ -5,7 +5,7 @@ function lightDark() {
     lightButton.classList.toggle("dark-button");
   
     if (lightButton.innerHTML == "☼") {
-        lightButton.innerHTML = "<i class='fa-regular fa-moon'></i>"
+        lightButton.innerHTML = "<i class='fa-regular fa-moon fa-sm'></i>"
     } else {
         lightButton.innerHTML = "☼"
     }
