@@ -63,7 +63,7 @@ def authorize_google():
 def home(uuid):
     user = user_ref.child(uuid).get()
     try:
-        app.logger.info(session)
+        app.logger.info(f"session {session}")
     except Exception as e:
         app.logger.error(f"Error!: {str(e)}")
     if user:
