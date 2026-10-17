@@ -24,6 +24,8 @@ user_ref = ref.child("users")
 
 @app.route('/')
 def unlogged():
+    if "user" in session:
+        return redirect(url_for("home", uuid=session["user"]))
     return render_template('index.html')
 
 @app.route("/login/google")
@@ -45,7 +47,7 @@ def authorize_google():
     fname = user_info["given_name"]
     lname = user_info["family_name"]
     uuid = user_info["sub"]
-    #session["user"] = uuid
+    session["user"] = uuid
 
     data = {"email": email,
            "first_name": fname,
@@ -62,13 +64,10 @@ def authorize_google():
 @app.route("/home/<uuid>")
 def home(uuid):
     user = user_ref.child(uuid).get()
+    app.logger.info(f"session: {session}")
     
-    try:
-        app.logger.info(f"session {session}")
-    except Exception as e:
-        app.logger.error(f"Error!: {str(e)}")
     if user:
-        app.logger.info(f"User with uuid:{uuid}, info:{user}")
+        app.logger.info(f"User with uuid: {uuid}, info: {user}")
     else:
         app.logger.error(f"Error: User doesn't exist")
         return "User not found", 404
@@ -76,4 +75,4 @@ def home(uuid):
     return render_template('main.html', name=user["first_name"])
     
 if __name__ == "__main__":
-    app.run()#debug=True)
+    app.run(debug=True)
