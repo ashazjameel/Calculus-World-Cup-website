@@ -45,7 +45,7 @@ def authorize_google():
     fname = user_info["given_name"]
     lname = user_info["family_name"]
     uuid = user_info["sub"]
-    session["user"] = uuid
+    #session["user"] = uuid
 
     data = {"email": email,
            "first_name": fname,
@@ -62,8 +62,9 @@ def authorize_google():
 @app.route("/home/<uuid>")
 def home(uuid):
     user = user_ref.child(uuid).get()
+    
     try:
-        app.logger.error(f"session {session}")
+        app.logger.info(f"session {session}")
     except Exception as e:
         app.logger.error(f"Error!: {str(e)}")
     if user:
