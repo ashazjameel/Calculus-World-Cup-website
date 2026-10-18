@@ -95,3 +95,11 @@ body {
 	margin-left: 10%;
 	margin-right: 10%;
 }
+
+.welcome {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	bottom: 0;
+	font-size: 6vh;
+}
