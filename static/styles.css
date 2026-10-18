@@ -64,6 +64,12 @@ body {
 	user-select: none;
 }
 
+@media screen and (max-width: 1050px) {
+	.title {
+		font-size: 15vw;
+	}
+}
+
 .label {
 	display: block;
 	margin: auto;
