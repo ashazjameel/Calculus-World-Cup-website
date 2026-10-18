@@ -65,14 +65,27 @@ body {
 }
 
 .label {
+	display: block;
+	margin: auto;
+	text-align: center;
 	user-select: none;
-	font-size: 1vw;
-	position: relative;
-	left: 300px;
+	font-size: 1.5vw;
+	user-select: none;
 }
 
 .dropdown {
+	display: block;
+    margin: auto;
+	font-size: 1vw;
+	text-align: center;
 	user-select: none;
-	position: relative;
-	left: 300px;
+}
+
+#dropdown_div {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	grid-template-rows: auto auto;
+	justify-content: space-around;
+	margin-left: 10%;
+	margin-right: 10%;
 }
