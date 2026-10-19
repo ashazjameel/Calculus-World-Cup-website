@@ -70,9 +70,9 @@ body {
 		font-size: 15vw;
 	}
 	#lightButton {
-		height: 4vw; width: 4vw;
-		font-size: 3vw;
-		border-radius: 0.8vw;
+		height: max(6vw, 4vh); width: max(6vw, 4vh);
+		font-size: max(4.5vw, 3vh);
+		border-radius: max(1.2vw, 0.8vh);
 	}
 }
 
