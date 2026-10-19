@@ -28,7 +28,7 @@ body {
 	height: 2vw; width: 2vw;
 	font-size: 1.5vw;
 	border: none;
-	border-radius: 8px;
+	border-radius: 0.4vw;
 	user-select: none;
 }
 
@@ -72,6 +72,7 @@ body {
 	#lightButton {
 		height: 4vw; width: 4vw;
 		font-size: 3vw;
+		border-radius: 0.8vw;
 	}
 }
 
