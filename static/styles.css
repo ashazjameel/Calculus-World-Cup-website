@@ -23,7 +23,6 @@ body {
 }
 
 #lightButton {
-	-webkit-text-size-adjust: 100%;
 	position: absolute;
 	top: 20px; right: 30px;
 	height: 2vw; width: 2vw;
