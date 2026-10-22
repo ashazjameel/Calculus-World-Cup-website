@@ -23,7 +23,7 @@ body {
 }
 
 #lightButton {
-	font-family: Times New Roman;
+	font-family: inherit;
 	position: absolute;
 	top: 20px; right: 30px;
 	height: 2vw; width: 2vw;
