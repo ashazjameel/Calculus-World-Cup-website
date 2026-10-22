@@ -5,6 +5,7 @@
 
 body {
 	font-family: TeXMath;
+	-webkit-text-size-adjust: 100%;
 }
 
 .dark-mode {
