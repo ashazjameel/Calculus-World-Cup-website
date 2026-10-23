@@ -40,6 +40,7 @@ body {
 }
 
 #google-login button {
+	font-family: inherit;
 	display: block;
 	margin: auto;
 	height: 8vh; width: 30vw;
