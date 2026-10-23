@@ -53,7 +53,7 @@ body {
 #register-text {
 	position: absolute;
 	bottom: 50px;
-	font-size: 50px;
+	font-size: 5.5vh;
 	transform: translate(-50%,0);
 }
 
