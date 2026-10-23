@@ -47,9 +47,10 @@ body {
 
 #google-login img {
 	position: absolute;
-	width: 4vh;
+	height: 4vh;
+	top: 0;
 	left: 50%;
-	transform: translate(calc(-2vh - 10vw), -1.25vh);
+	transform: translate(calc(-2vh - 10vw), 2vh);
 }
 
 #register-text {
@@ -82,7 +83,7 @@ body {
 		width: 60vw;
 	}
 	#google-login img {
-		transform: translate(calc(-2vh - 20vw), -1.5vh);
+		transform: translate(calc(-2vh - 20vw), 2vh);
 	}
 }
 
