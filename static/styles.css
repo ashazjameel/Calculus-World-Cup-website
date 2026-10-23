@@ -41,9 +41,16 @@ body {
 
 #google-login button {
 	font-family: inherit;
+	background-color: #e6e3e3;
+	border: outset;
 	display: block;
 	margin: auto;
 	height: 8vh; width: 30vw;
+}
+
+#google-login button:hover {
+	background-color: #d9d6d6;
+	cursor: pointer;
 }
 
 #google-login button div {
@@ -51,6 +58,10 @@ body {
 	left: calc(5vw + 2vh);
 	width: calc(100% - 5vw - 2vh);
 	font-size: 2vw;
+}
+
+#google-login button:active {
+	border: inset;
 }
 
 #google-login img {
