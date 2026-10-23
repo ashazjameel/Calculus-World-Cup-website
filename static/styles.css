@@ -33,6 +33,10 @@ body {
 	user-select: none;
 }
 
+#lightButton:hover {
+	cursor: pointer;
+}
+
 #google-login {
 	position: absolute;
 	top: 50%; left: 0%;
