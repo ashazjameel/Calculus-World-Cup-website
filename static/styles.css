@@ -95,7 +95,7 @@ body {
 		font-size: 5vw;
 	}
 	#google-login img {
-		transform: translate(calc(-2vh - 20vw), 2vh);
+		transform: translate(calc(-3vh - 20vw), 2vh);
 	}
 }
 
