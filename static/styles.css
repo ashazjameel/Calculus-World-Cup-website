@@ -35,25 +35,29 @@ body {
 
 #google-login {
 	position: absolute;
-	top: 50%; left: 50%;
+	top: 50%; left: 0%;
+	width: 100%;
 }
 
 #google-login button {
+	display: block;
+	margin: auto;
 	height: 8vh; width: 30vw;
-	transform: translate(-50%, 0);
 }
 
 #google-login img {
-	position: absolute;
-	top: 50%; left: 0;
+	display: block;
+	margin: auto;
+	top: 50%;
 	width: 4vh;
-	transform: translate(calc(100% - 15vw), -50%);
+	transform: translate(calc(100% - 14vw), -150%);
 }
 
 #register-text {
 	position: absolute;
+	left: 50%;
 	font-size: 5.5vh;
-	bottom: 5.5vh;
+	bottom: 10vh;
 	transform: translate(-50%,0);
 }
 
@@ -74,6 +78,9 @@ body {
 		height: max(6vw, 4vh); width: max(6vw, 4vh);
 		font-size: max(4.5vw, 3vh);
 		border-radius: max(1.2vw, 0.8vh);
+	}
+	#google-login button { 
+		height: 8vh; width: 60vw;
 	}
 }
 
