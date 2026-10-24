@@ -115,11 +115,24 @@ body {
 	}
 }
 
+#gamble_form {
+	position: absolute;
+	left: 0;
+	width: 100%;
+
+}
+
+#gamble_form input {
+	position: relative;
+	display: block;
+	margin: auto;
+	top: 10vh;
+}
+
 .label {
 	display: block;
 	margin: auto;
 	text-align: center;
-	user-select: none;
 	font-size: 1.5vw;
 	user-select: none;
 }
