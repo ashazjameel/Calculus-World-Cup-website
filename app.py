@@ -54,7 +54,7 @@ def authorize_google():
            "last_name": lname}
 
     try:
-        user_ref.child(uuid).set(data)
+        user_ref.child(uuid).update(data)
     except Exception as e:
         app.logger.error(f"Error with database: {str(e)}")
         return "Error with database", 500
