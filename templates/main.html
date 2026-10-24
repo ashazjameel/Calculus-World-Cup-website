@@ -17,7 +17,7 @@
 		<div id=dropdown_div>
 			<div>
 				<label class="label" for="group_a"> The Big Leagues </label>
-				<select class="dropdown" name="group_a" id="group_a">
+				<select class="dropdown" name="group_a" id="group_a" form="gamble_form">
 					<option selected disabled> Group A selection </option>
 					<option value="carson"> Carson </option>
 					<option value="tyron"> Tyron </option>
@@ -27,7 +27,7 @@
 			</div>
 			<div>
 				<label class="label" for="group_b"> Pro League </label>
-				<select class="dropdown" name="group_b" id="group_b">
+				<select class="dropdown" name="group_b" id="group_b" form="gamble_form">
 					<option selected disabled> Group B selection </option>
 					<option value="levi"> Levi </option>
 					<option value="youssef"> Youssef </option>
@@ -37,7 +37,7 @@
 			</div>
 			<div>
 				<label class="label" for="group_c"> Intermediate League </label>
-				<select class="dropdown" name="group_c" id="group_c">
+				<select class="dropdown" name="group_c" id="group_c" form="gamble_form">
 					<option selected disabled> Group C selection </option>
 					<option value="bhavya"> Bhavya </option>
 					<option value="affan"> Affan </option>
@@ -47,7 +47,7 @@
 			</div>
 			<div>
 				<label class="label" for="group_d"> Dropout League </label>
-				<select class="dropdown" name="group_d" id="group_d">
+				<select class="dropdown" name="group_d" id="group_d" form="gamble_form">
 					<option selected disabled> Group D selection </option>
 					<option value="rohaan"> Rohaan </option>
 					<option value="ahmed_dia"> Ahmed Dia </option>
@@ -57,7 +57,7 @@
 			</div>
 			<div>
 				<label class="label" for="group_e"> Little League </label>
-				<select class="dropdown" name="group_e" id="group_e">
+				<select class="dropdown" name="group_e" id="group_e" form="gamble_form">
 					<option selected disabled> Group E selection </option>
 					<option value="abuzar"> Abuzar </option>
 					<option value="krish"> Krish </option>
@@ -66,7 +66,11 @@
 				</select>
 			</div>
 		</div>
-			
+		
+		<form method="POST" id="gamble_form">
+			<input type="submit" value="Submit">
+		</form>
+		
 		<p class="welcome"> Welcome, {{name}} </p>
     </body>
 </html>
