@@ -64,7 +64,17 @@ def authorize_google():
 @app.route("/home", methods=["GET","POST"])
 def home():
     if request.method == "POST":
-        pass
+        group_a = request.form.get("group_a")
+        group_b = request.form.get("group_b")
+        group_c = request.form.get("group_c")
+        group_d = request.form.get("group_d")
+        group_e = request.form.get("group_e")
+        if not(group_a and group_b and group_c and group_d and group_e):
+            return render_template('main.html', name=user["first_name"]) #add error handling here
+        else:
+            #submit to database
+            pass
+    
     if "user" in session:
         uuid = session["user"]
     else:
