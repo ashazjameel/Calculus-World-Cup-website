@@ -63,24 +63,11 @@ def authorize_google():
     
 @app.route("/home", methods=["GET","POST"])
 def home():
-    if request.method == "POST":
-        group_a = request.form.get("group_a")
-        group_b = request.form.get("group_b")
-        group_c = request.form.get("group_c")
-        group_d = request.form.get("group_d")
-        group_e = request.form.get("group_e")
-        if not(group_a and group_b and group_c and group_d and group_e):
-            return render_template('main.html', name=user["first_name"]) #add error handling here
-        else:
-            #submit to database
-            pass
-    
     if "user" in session:
         uuid = session["user"]
     else:
         app.logger.error(f"Error: User not logged in")
         return redirect(url_for("unlogged"))
-
     
     user = user_ref.child(uuid).get()
     app.logger.info(f"session: {session}")
@@ -90,7 +77,16 @@ def home():
     else:
         app.logger.error(f"Error: User doesn't exist")
         return "User not found", 404
-        
+
+    if request.method == "POST":
+        group_a = request.form.get("group_a")
+        group_b = request.form.get("group_b")
+        group_c = request.form.get("group_c")
+        group_d = request.form.get("group_d")
+        group_e = request.form.get("group_e")
+        #submit to database
+        #return to some other user page
+    
     return render_template('main.html', name=user["first_name"])
     
 if __name__ == "__main__":
