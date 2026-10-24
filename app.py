@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, session, redirect
+from flask import Flask, render_template, url_for, session, redirect, request
 from authlib.integrations.flask_client import OAuth
 import firebase_admin
 from firebase_admin import db, credentials
@@ -61,8 +61,10 @@ def authorize_google():
         
     return redirect(url_for("home"))
     
-@app.route("/home")
+@app.route("/home", methods=["GET","POST"])
 def home():
+    if request.method == "POST":
+        pass
     if "user" in session:
         uuid = session["user"]
     else:
