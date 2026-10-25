@@ -94,7 +94,7 @@ def home():
                "group_d_selection": group_d,
                "group_e_selection": group_e}
         try:
-            user_ref.child(uuid).update(data)
+            user_ref.child(uuid).child("gamble").set(data)
         except Exception as e:
             app.logger.error(f"Error with database: {str(e)}")
             return "Error with database", 500
