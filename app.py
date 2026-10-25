@@ -53,13 +53,17 @@ def authorize_google():
            "first_name": fname,
            "last_name": lname}
 
-    try:
-        user_ref.child(uuid).update(data)
-    except Exception as e:
-        app.logger.error(f"Error with database: {str(e)}")
-        return "Error with database", 500
-        
-    return redirect(url_for("home"))
+    user = user_ref.child(uuid)
+    if user:
+        return redirect(url_for("home"))    #user already exists
+    else:    #user doesn't exist
+        try:
+            user_ref.child(uuid).set(data)
+        except Exception as e:
+            app.logger.error(f"Error with database: {str(e)}")
+            return "Error with database", 500
+            
+        return redirect(url_for("home"))
     
 @app.route("/home", methods=["GET","POST"])
 def home():
@@ -84,7 +88,16 @@ def home():
         group_c = request.form.get("group_c")
         group_d = request.form.get("group_d")
         group_e = request.form.get("group_e")
-        #submit to database
+        data = {"group_a_selection": group_a,
+                "group_b_selection": group_b,
+               "group_c_selection": group_c,
+               "group_d_selection": group_d,
+               "group_e_selection": group_e}
+        try:
+            user_ref.child(uuid).update(data)
+        except Exception as e:
+            app.logger.error(f"Error with database: {str(e)}")
+            return "Error with database", 500
         #return to some other user page
     
     return render_template('main.html', name=user["first_name"])
