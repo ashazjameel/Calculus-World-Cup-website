@@ -25,7 +25,7 @@ user_ref = ref.child("users")
 @app.route('/')
 def unlogged():
     if "user" in session:
-        return redirect(url_for("home"))
+        return redirect(url_for("vote"))
     return render_template('index.html')
 
 @app.route("/login/google")
@@ -55,7 +55,7 @@ def authorize_google():
 
     user = user_ref.child(uuid)
     if user:
-        return redirect(url_for("home"))    #user already exists
+        return redirect(url_for("vote"))    #user already exists
     else:    #user doesn't exist
         try:
             user_ref.child(uuid).set(data)
@@ -63,10 +63,10 @@ def authorize_google():
             app.logger.error(f"Error with database: {str(e)}")
             return "Error with database", 500
             
-        return redirect(url_for("home"))
+        return redirect(url_for("vote"))
     
-@app.route("/home", methods=["GET","POST"])
-def home():
+@app.route("/vote", methods=["GET","POST"])
+def vote():
     if "user" in session:
         uuid = session["user"]
     else:
@@ -100,7 +100,7 @@ def home():
             return "Error with database", 500
         #return to some other user page
     
-    return render_template('main.html', name=user["first_name"])
+    return render_template('vote.html', name=user["first_name"])
     
 if __name__ == "__main__":
     app.run(debug=True)
