@@ -55,6 +55,8 @@ def authorize_google():
 
     user = user_ref.child(uuid)
     if user:         #user already exists
+        app.logger.info(user)
+        app.logger.info(user_ref.child(uuid))
         return redirect(url_for("vote"))
     else:            #user doesn't exist
         try:
