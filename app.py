@@ -24,7 +24,7 @@ user_ref = ref.child("users")
 
 @app.route('/')
 def unlogged():
-    if "user" in session:
+    if "user" in session:        #user already logged in
         return redirect(url_for("vote"))
     return render_template('index.html')
 
@@ -54,9 +54,9 @@ def authorize_google():
            "last_name": lname}
 
     user = user_ref.child(uuid)
-    if user:
-        return redirect(url_for("vote"))    #user already exists
-    else:    #user doesn't exist
+    if user:         #user already exists
+        return redirect(url_for("vote"))
+    else:            #user doesn't exist
         try:
             user_ref.child(uuid).set(data)
         except Exception as e:
@@ -80,6 +80,7 @@ def vote():
         app.logger.info(f"User with uuid: {uuid}, info: {user}")
     else:
         app.logger.error(f"Error: User doesn't exist")
+        session.pop("user")
         return "User not found", 404
 
     if request.method == "POST":
