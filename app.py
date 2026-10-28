@@ -43,16 +43,17 @@ def authorize_google():
     userinfo_endpoint = google.server_metadata["userinfo_endpoint"]
     resp = google.get(userinfo_endpoint)
     user_info = resp.json()
-    app.logger.info(f"test info {user_info}")
     email = user_info["email"]
     fname = user_info["given_name"]
     lname = user_info["family_name"]
     uuid = user_info["sub"]
+    pfp = user_info["picture"]
     session["user"] = uuid
 
     data = {"email": email,
            "first_name": fname,
-           "last_name": lname}
+           "last_name": lname,
+           "pfp": pfp}
 
     user = user_ref.child(uuid).get()
     if user:         #user already exists
