@@ -43,6 +43,7 @@ def authorize_google():
     userinfo_endpoint = google.server_metadata["userinfo_endpoint"]
     resp = google.get(userinfo_endpoint)
     user_info = resp.json()
+    app.logger.info(f"test info {user_info}")
     email = user_info["email"]
     fname = user_info["given_name"]
     lname = user_info["family_name"]
