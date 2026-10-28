@@ -120,7 +120,7 @@ def profile():
         session.pop("user")
         return "User not found", 404
     
-    gamble = user.child("gamble").get()
+    gamble = user_ref.child(uuid).child("gamble").get()
     if gamble:
         app.logger.info(f"User with uuid: {uuid}, gambling with: {gamble}")
     else:    #user hasn't voted yet
