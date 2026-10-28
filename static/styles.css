@@ -47,6 +47,7 @@ body {
 	font-family: Times New Roman;
 	background-color: #e6e3e3;
 	border: outset;
+	border-width: 5px;
 	display: block;
 	margin: auto;
 	height: 8vh; width: 30vw;
@@ -57,6 +58,11 @@ body {
 	cursor: pointer;
 }
 
+#google-login button:active {
+	border: inset;
+	border-width: 5px;
+}
+
 #google-login button div {
 	position: relative;
 	left: calc(5vw + 2vh);
@@ -64,8 +70,8 @@ body {
 	font-size: 2vw;
 }
 
-#google-login button:active {
-	border: inset;
+#google-login button:active div{
+	top: 5%;
 }
 
 #google-login img {
@@ -74,6 +80,10 @@ body {
 	top: 0;
 	left: 50%;
 	transform: translate(calc(-2vh - 10vw), 2vh);
+}
+
+#google-login button:active img{
+	top: 5%;
 }
 
 #register-text {
