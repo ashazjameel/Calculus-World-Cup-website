@@ -99,9 +99,19 @@ def vote():
         except Exception as e:
             app.logger.error(f"Error with database: {str(e)}")
             return "Error with database", 500
-        #return to some other user page
+        return redirect(url_for("profile"))
     
     return render_template('vote.html', name=user["first_name"])
+
+@app.route('/profile')
+def profile():
+    if "user" in session:
+        uuid = session["user"]
+    else:
+        app.logger.error(f"Error: User not logged in")
+        return redirect(url_for("unlogged"))
     
+    return render_template('profile.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
