@@ -110,8 +110,25 @@ def profile():
     else:
         app.logger.error(f"Error: User not logged in")
         return redirect(url_for("unlogged"))
+
+    user = user_ref.child(uuid).get()
+    app.logger.info(f"session: {session}")
+    if user:
+        app.logger.info(f"User profile with uuid: {uuid}, info: {user}")
+    else:    #user doesn;t exist
+        app.logger.error(f"Error: User doesn't exist")
+        session.pop("user")
+        return "User not found", 404
     
-    return render_template('profile.html')
+    gamble = user.child("gamble").get()
+    if gamble:
+        app.logger.info(f"User with uuid: {uuid}, gambling with: {gamble}")
+    else:    #user hasn't voted yet
+        app.logger.error(f"Error: User hasn't voted yet")
+        return redirect(url_for("vote"))
+    
+    return render_template('profile.html', group_a=gamble["group_a_selection"], group_b=gamble["group_b_selection"],
+                          group_c=gamble["group_c_selection"], group_d=gamble["group_d_selection"], group_e=gamble["group_e_selection"])
 
 if __name__ == "__main__":
     app.run(debug=True)
