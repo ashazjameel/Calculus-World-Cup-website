@@ -85,6 +85,10 @@ def vote():
         session.pop("user")
         return "User not found", 404
 
+    gamble = user_ref.child(uuid).child("gamble").get()
+    if gamble:    #already voted
+        return redirect(url_for("profile"))
+        
     if request.method == "POST":
         group_a = request.form.get("group_a")
         group_b = request.form.get("group_b")
