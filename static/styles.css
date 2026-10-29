@@ -172,3 +172,10 @@ body {
 	font-size: 6vh;
 	text-align: center;
 }
+
+.pfp {
+	position: relative;
+	left: 10%;
+	width: 5vw;
+	border-radius: 1vw;
+}
