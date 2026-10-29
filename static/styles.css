@@ -173,9 +173,15 @@ body {
 	text-align: center;
 }
 
+.profile {
+	position: relative;
+	top: -5vw;
+	width: 80%;
+	left: 10%;
+}
+
 .pfp {
 	position: relative;
-	left: 10%;
 	width: 5vw;
 	border-radius: 1vw;
 }
