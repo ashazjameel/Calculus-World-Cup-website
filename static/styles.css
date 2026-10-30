@@ -177,6 +177,7 @@ body {
 	position: relative;
 	top: -5vw;
 	width: 80%;
+	height: 60vh;
 	left: 10%;
 }
 
@@ -191,4 +192,12 @@ body {
 	top: -0.5vw;
 	left: 1%;
 	font-size: 2vw;
+}
+
+.profile p {
+	position: absolute;
+	font-size: 1.5vw;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
 }
