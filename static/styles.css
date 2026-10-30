@@ -202,3 +202,16 @@ body {
 	bottom: 0px;
 	text-align: center;
 }
+
+.profile .choices {
+	position: relative;
+	top: 5vh;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	grid-template-rows: auto;
+}
+
+.profile .choices div {
+	display: block;
+	text-align: center;
+}
