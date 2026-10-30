@@ -235,6 +235,8 @@ body {
 }
 
 .profile .choices div div {
+	box-sizing: border-box;
+	padding-top: 1.5vw;
 	height: calc(60vh - 8.25vw - 5vh - 3px - 0.6vw);
 }
 
