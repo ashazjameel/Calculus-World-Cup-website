@@ -134,7 +134,7 @@ def profile():
         return redirect(url_for("vote"))
 
     comp_ref = ref.child("competitors")
-    selections = [gamble["group_a_selection"],gamble["group_b_selection"],gamble["group_c_selection"],group_d=gamble["group_d_selection"],group_e=gamble["group_e_selection"]]
+    selections = [gamble["group_a_selection"],gamble["group_b_selection"],gamble["group_c_selection"],gamble["group_d_selection"],gamble["group_e_selection"]]
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, group_a=gamble["group_a_selection"], group_b=gamble["group_b_selection"],
                           group_c=gamble["group_c_selection"], group_d=gamble["group_d_selection"], group_e=gamble["group_e_selection"], selections=selections)
