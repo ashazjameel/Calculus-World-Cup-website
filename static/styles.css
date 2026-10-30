@@ -175,11 +175,16 @@ body {
 
 .profile {
 	position: relative;
-	background-color: #dedede;
 	top: -5vw;
 	width: 80%;
 	height: 60vh;
 	left: 10%;
+	background-color: #dedede;
+	box-sizing: border-box;
+	border-style: solid;
+	border-color: black;
+	border-width: 0.3vw;
+	border-radius: 1vw;
 }
 
 .profile .pfp {
