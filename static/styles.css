@@ -175,6 +175,7 @@ body {
 
 .profile {
 	position: relative;
+	background-color: #dedede;
 	top: -5vw;
 	width: 80%;
 	height: 60vh;
