@@ -133,6 +133,9 @@ def profile():
         app.logger.error(f"Error: User hasn't voted yet")
         return redirect(url_for("vote"))
 
+    comp = ref.child("competitors").get()
+    for i in comp:
+        ref.child("competitors").child("marks").update(["marks": 0, "score": 0])
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, group_a=gamble["group_a_selection"], group_b=gamble["group_b_selection"],
                           group_c=gamble["group_c_selection"], group_d=gamble["group_d_selection"], group_e=gamble["group_e_selection"])
