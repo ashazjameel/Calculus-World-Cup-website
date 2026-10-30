@@ -212,6 +212,7 @@ body {
 }
 
 .profile .choices div {
+	font-size: 1.5vw;
 	display: block;
 	text-align: center;
 }
