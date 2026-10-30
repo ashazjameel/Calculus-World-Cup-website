@@ -137,7 +137,7 @@ def profile():
     app.logger.info(f"comp: {comp}")
     for i in comp:
         app.logger.info(f"competitor: {i}")
-        #ref.child("competitors").update(["marks": 0, "score": 0])
+        ref.child("competitors").child(i).update(["marks": 0, "score": 0])
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, group_a=gamble["group_a_selection"], group_b=gamble["group_b_selection"],
                           group_c=gamble["group_c_selection"], group_d=gamble["group_d_selection"], group_e=gamble["group_e_selection"])
