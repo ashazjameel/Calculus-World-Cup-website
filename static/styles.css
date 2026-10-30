@@ -235,7 +235,7 @@ body {
 }
 
 .profile .choices div div {
-	height: calc(60vh - 8.25vw - 5vh - 3px);
+	height: calc(60vh - 8.25vw - 5vh - 3px - 0.6vw);
 }
 
 .selection-text {
