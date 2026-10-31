@@ -140,7 +140,8 @@ def profile():
         comp = comp_ref.child(competitor)
         comp_score = [comp.child("marks").get(), comp.child("score").get()]
         scores.append(comp_score)
-        
+
+    app.logger.info(f"score info: {selections}, {scores}")
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, selections=selections, scores=scores)
 
