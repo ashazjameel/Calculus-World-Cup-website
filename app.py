@@ -138,7 +138,7 @@ def profile():
     scores = []
     for competitor in selections:
         app.logger.info(f"competitor: {competitor}")
-        comp = comp_ref.child(competitor)
+        comp = comp_ref.child(competitor.lower())
         comp_score = [comp.child("marks").get(), comp.child("score").get()]
         scores.append(comp_score)
 
