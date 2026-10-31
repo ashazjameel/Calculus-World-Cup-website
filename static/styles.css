@@ -232,11 +232,6 @@ body {
 	height: calc(60vh - 8.25vw - 5vh - 3px - 0.6vw);
 }
 
-.profile .choices div div p {
-	position: relative;
-	font-size: 1.5vw;
-}
-
 .selection-text {
 	position: absolute;
 	left: 0;
