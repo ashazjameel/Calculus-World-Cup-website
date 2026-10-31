@@ -138,7 +138,7 @@ def profile():
     scores = []
     for competitor in selections:
         comp = comp_ref.child(competitor)
-        comp_score = [comp.child("marks").get(),comp.child("score").get()]
+        comp_score = [comp.child("marks").get(), comp.child("score").get()]
         scores.append(comp_score)
         
     name = str(user["first_name"]+" "+user["last_name"])
