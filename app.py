@@ -134,7 +134,7 @@ def profile():
         return redirect(url_for("vote"))
 
     comp_ref = ref.child("competitors")
-    selections = [gamble["group_a_selection"], gamble["group_b_selection"], gamble["group_c_selection"], gamble["group_d_selection"], gamble["group_e_selection"]]
+    selections = [gamble["group_a_selection"].title(), gamble["group_b_selection"].title(), gamble["group_c_selection"].title(), gamble["group_d_selection"].title(), gamble["group_e_selection"].title()]
     scores = []
     for competitor in selections:
         comp = comp_ref.child(competitor)
