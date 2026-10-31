@@ -212,14 +212,6 @@ body {
 	font-size: 2vw;
 }
 
-.profile p {
-	position: absolute;
-	font-size: 1.5vw;
-	width: 100%;
-	bottom: 0px;
-	text-align: center;
-}
-
 .profile .choices {
 	position: relative;
 	top: 5vh;
@@ -242,6 +234,7 @@ body {
 
 .profile .choices div div p {
 	position: relative;
+	font-size: 1.5vw;
 }
 
 .selection-text {
