@@ -137,6 +137,7 @@ def profile():
     selections = [gamble["group_a_selection"].title(), gamble["group_b_selection"].title(), gamble["group_c_selection"].title(), gamble["group_d_selection"].title(), gamble["group_e_selection"].title()]
     scores = []
     for competitor in selections:
+        app.logger.info(f"competitor: {competitor}")
         comp = comp_ref.child(competitor)
         comp_score = [comp.child("marks").get(), comp.child("score").get()]
         scores.append(comp_score)
