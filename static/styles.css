@@ -238,6 +238,22 @@ body {
 	text-align: center;
 }
 
+.button {
+	background-color: #e6e3e3;
+	border: outset;
+	border-width: 5px;
+}
+
+.button:hover {
+	background-color: #d9d6d6;
+	cursor: pointer;
+}
+
+.button:active {
+	border: inset;
+	border-width: 5px;
+}
+
 @media screen and (max-width: 1050px) {
 	.title {
 		font-size: 15vw;
