@@ -146,9 +146,9 @@ def profile():
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, selections=selections, scores=scores)
 
-@app.route('/games')
-def games():
-    return render_template('games.html')
+@app.route('/matches')
+def matches():
+    return render_template('matches.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
