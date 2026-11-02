@@ -276,4 +276,14 @@ body {
 		height: 4vh;
 		font-size: 5.5vw;
 	}
+	.profile .choices {
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto;
+	}
+	.profile .choices div {
+		font-size: 3vw;
+	}
+	.profile .choices div div {
+		height: calc((60vh - 8.25vw - 5vh - 3px - 0.6vw) / 2 - 2.5vw);
+	}
 }
