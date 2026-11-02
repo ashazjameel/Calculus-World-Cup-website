@@ -103,28 +103,6 @@ body {
 	user-select: none;
 }
 
-@media screen and (max-width: 1050px) {
-	.title {
-		font-size: 15vw;
-	}
-	#lightButton {
-		height: max(6vw, 4vh); width: max(6vw, 4vh);
-		font-size: max(4.5vw, 3vh);
-		border-radius: max(1.2vw, 0.8vh);
-	}
-	#google-login button { 
-		width: 60vw;
-	}
-	#google-login button div {
-		left: calc(10vw + 2vh);
-		width: calc(100% - 10vw - 2vh);
-		font-size: 5vw;
-	}
-	#google-login img {
-		transform: translate(calc(-3vh - 20vw), 2vh);
-	}
-}
-
 #gamble_form {
 	position: absolute;
 	left: 0;
@@ -238,4 +216,37 @@ body {
 .centre {
 	display: flex;
 	justify-content: center;
+}
+
+@media screen and (max-width: 1050px) {
+	.title {
+		font-size: 15vw;
+	}
+	#lightButton {
+		height: max(6vw, 4vh); width: max(6vw, 4vh);
+		font-size: max(4.5vw, 3vh);
+		border-radius: max(1.2vw, 0.8vh);
+	}
+	#google-login button { 
+		width: 60vw;
+	}
+	#google-login button div {
+		left: calc(10vw + 2vh);
+		width: calc(100% - 10vw - 2vh);
+		font-size: 5vw;
+	}
+	#google-login img {
+		transform: translate(calc(-3vh - 20vw), 2vh);
+	}
+	.label {
+		font-size: 3vw;
+	}
+	.dropdown {
+		font-size: 2vw;
+	}
+	#dropdown_div {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto auto auto auto;
+		gap: 5vh;
+	}
 }
