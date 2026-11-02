@@ -251,10 +251,10 @@ body {
 		transform: translate(calc(-3vh - 20vw), 2vh);
 	}
 	.label {
-		font-size: 3vw;
+		font-size: 5.5vw;
 	}
 	.dropdown {
-		font-size: 2vw;
+		font-size: 2.5vw;
 	}
 	#dropdown_div {
 		grid-template-columns: auto;
