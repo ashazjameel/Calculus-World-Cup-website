@@ -220,11 +220,10 @@ body {
 
 .welcome {
 	position: absolute;
-	left: 50%;
-	transform: translate(-50%,0);
+	width: 100%;
+	left: 0;
 	bottom: 0;
 	font-size: 6vh;
-	text-align: center;
 }
 
 @media screen and (max-width: 1050px) {
