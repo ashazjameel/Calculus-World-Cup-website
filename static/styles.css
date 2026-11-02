@@ -121,6 +121,10 @@ body {
 	font-size: 2.5vw;
 }
 
+#gamble_form input:hover {
+	cursor: pointer;
+}
+
 .label {
 	display: block;
 	margin: auto;
