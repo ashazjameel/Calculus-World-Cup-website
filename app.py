@@ -136,12 +136,17 @@ def profile():
     comp_ref = ref.child("competitors")
     selections = [gamble["group_a_selection"].title(), gamble["group_b_selection"].title(), gamble["group_c_selection"].title(), gamble["group_d_selection"].title(), gamble["group_e_selection"].title()]
     scores = []
+    total_marks, total_score = 0,0
     for competitor in selections:
         app.logger.info(f"competitor: {competitor}")
         comp = comp_ref.child(competitor.lower())
-        comp_score = [comp.child("marks").get(), comp.child("score").get()]
+        marks, score = comp.child("marks").get(), comp.child("score").get()
+        comp_score = [marks, scores]
+        total_marks += marks
+        total_score += score
         scores.append(comp_score)
-
+    scores.append([total_marks, total_score])
+    
     app.logger.info(f"score info: {selections}, {scores}")
     name = str(user["first_name"]+" "+user["last_name"])
     return render_template('profile.html', pfp=user["pfp"], name=name, selections=selections, scores=scores)
