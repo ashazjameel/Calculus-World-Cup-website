@@ -301,4 +301,13 @@ body {
 	#total-text {
 		font-size: 3vw;
 	}
+	.profile span {
+		position: absolute;
+		width: calc(100% - 5.75vw);
+		height: 100%;
+		top: 0;
+		left: 5.75vw;
+		font-size: 5vw;
+		text-align: center;
+	}
 }
