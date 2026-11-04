@@ -219,6 +219,7 @@ body {
 	bottom: 0;
 	font-size: 6vh;
 	text-align: center;
+	user-select: none;
 }
 
 .button {
