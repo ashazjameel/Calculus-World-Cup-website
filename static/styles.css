@@ -46,12 +46,12 @@ body {
 	font-family: Times New Roman;
 	display: block;
 	margin: auto;
-	height: 8; width: 30vw;
+	height: 8dvh; width: 30vw;
 }
 
 #google-login button div {
 	position: relative;
-	left: calc(5vw + 2);
+	left: calc(5vw + 2dvh);
 	width: calc(100% - 5vw - 2dvh);
 	font-size: 2vw;
 }
