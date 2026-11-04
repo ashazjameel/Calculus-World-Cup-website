@@ -219,6 +219,7 @@ body {
 }
 
 .button {
+	color: #000000;
 	background-color: #e6e3e3;
 	border: outset;
 	border-width: 5px;
