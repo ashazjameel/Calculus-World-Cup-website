@@ -30,7 +30,6 @@ body {
 	font-size: 1.5vw;
 	border: none;
 	border-radius: 0.4vw;
-	user-select: none;
 }
 
 #lightButton:hover {
@@ -87,7 +86,6 @@ body {
 	letter-spacing: -0.75vw;
 	text-align: center;
 	margin-top: 2.5%;
-	user-select: none;
 }
 
 #gamble_form {
@@ -113,7 +111,6 @@ body {
 	margin: auto;
 	text-align: center;
 	font-size: 1.5vw;
-	user-select: none;
 }
 
 .dropdown {
@@ -121,7 +118,6 @@ body {
     margin: auto;
 	font-size: 1vw;
 	text-align: center;
-	user-select: none;
 }
 
 #dropdown_div {
