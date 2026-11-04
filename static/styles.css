@@ -251,6 +251,14 @@ body {
 	bottom: 0;
 }
 
+.entry {
+	position: relative;
+	width: 80%;
+	left: 10%;
+	background-color: #dedede;
+	
+}
+
 @media screen and (max-width: 1050px) {
 	.title {
 		font-size: 15vw;
