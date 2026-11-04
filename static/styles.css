@@ -260,6 +260,12 @@ body {
 	
 }
 
+.unselectable {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 @media screen and (max-width: 1050px) {
 	.title {
 		font-size: 15vw;
