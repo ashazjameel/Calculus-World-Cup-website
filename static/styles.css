@@ -310,7 +310,7 @@ body {
 		font-size: 3vw;
 	}
 	.profile .choices div div {
-		height: calc((60dvh - 8.25vw - 5dvh - 3px - 0.6vw) / 2 - 2.5vw);
+		height: calc((60dvh - 8.25vw - 5dvh - 3px - 0.6vw - 5vw) / 2 - 2.5vw);
 	}
 	#total-text {
 		font-size: 3vw;
