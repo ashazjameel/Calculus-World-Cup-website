@@ -251,9 +251,10 @@ body {
 
 .entry {
 	position: relative;
-	width: 80%;
+	width: 40%;
 	height: 10dvh;
-	left: 10%;
+	left: 30%;
+	border-radius: 0.3vw;
 	display: grid;
 	background-color: #dedede;
 	align-items: center;
