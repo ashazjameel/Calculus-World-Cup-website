@@ -307,13 +307,13 @@ body {
 		grid-template-rows: auto auto;
 	}
 	.profile .choices div {
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 	.profile .choices div div {
 		height: calc((60dvh - 8.25vw - 5dvh - 3px - 0.6vw - 5vw) / 2 - 2.5vw);
 	}
 	#total-text {
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 	.profile span {
 		position: absolute;
