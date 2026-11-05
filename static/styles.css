@@ -299,6 +299,11 @@ body {
 	left: -1.5vw;
 }
 
+.score-m {
+	position: relative;
+	top: -1dvh;
+}
+
 .score-right {
 	position: relative;
 	top: -1dvh;
