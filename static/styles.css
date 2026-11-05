@@ -252,9 +252,11 @@ body {
 .entry {
 	position: relative;
 	width: 80%;
+	height: 10dvh;
 	left: 10%;
+	display: grid;
 	background-color: #dedede;
-	
+	align-items: center;
 }
 
 .unselectable {
@@ -270,6 +272,36 @@ body {
 	width: 30vw;
 	height: 6dvh;
 	font-size: 2vw;
+}
+
+.name-left {
+	position: relative;
+	left: 5vw;
+	top: 2dvh;
+}
+
+.name-right {
+	position: relative;
+	right: 5vw;
+	top: 2dvh;
+	float: right;
+}
+
+.score {
+	width: 100%;
+	text-align: center;
+}
+
+.score-left {
+	position: relative;
+	top: -1dvh;
+	left: -1.5vw;
+}
+
+.score-right {
+	position: relative;
+	top: -1dvh;
+	right: -1.5vw;
 }
 
 @media screen and (max-width: 1050px) {
