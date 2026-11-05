@@ -263,6 +263,12 @@ body {
 	-ms-user-select: none;
 }
 
+#button-matches {
+	width: 30vw;
+	height: 6dvh;
+	font-size: 2.5vw;
+}
+
 @media screen and (max-width: 1050px) {
 	.title {
 		font-size: 15vw;
@@ -332,5 +338,10 @@ body {
 	}
 	.profile .pfp img {
 		width: 10vw;
+	}
+	#button-matches {
+		width: 40vw;
+		height: 4dvh;
+		font-size:3vw;
 	}
 }
