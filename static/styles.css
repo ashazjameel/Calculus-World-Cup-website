@@ -264,9 +264,12 @@ body {
 }
 
 #button-matches {
+	font-family: TeXMath, Times New Roman;
+	position: absolute;
+	bottom: 3dvh;
 	width: 30vw;
 	height: 6dvh;
-	font-size: 2.5vw;
+	font-size: 2vw;
 }
 
 @media screen and (max-width: 1050px) {
