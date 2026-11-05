@@ -251,6 +251,7 @@ body {
 
 .entry {
 	position: relative;
+	font-size: 1.5vw;
 	width: 40%;
 	height: 10dvh;
 	left: 30%;
@@ -293,20 +294,16 @@ body {
 	text-align: center;
 }
 
-.score-left {
+.score span {
 	position: relative;
 	top: -1dvh;
+}
+
+.score-left {
 	left: -1.5vw;
 }
 
-.score-m {
-	position: relative;
-	top: -1dvh;
-}
-
 .score-right {
-	position: relative;
-	top: -1dvh;
 	right: -1.5vw;
 }
 
