@@ -153,6 +153,8 @@ def profile():
 
 @app.route('/matches')
 def matches():
+    games = ref.child("matches").get()
+    app.logger.info(f"games: {games}")
     return render_template('matches.html')
 
 if __name__ == "__main__":
