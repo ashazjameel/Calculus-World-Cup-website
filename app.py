@@ -155,6 +155,11 @@ def profile():
 def matches():
     games = ref.child("matches").get()
     app.logger.info(f"games: {games}")
+    games_list = []
+    
+    for i,v in games.items():
+        games_list.append([v["comp 1"], v["comp 2"], v["mark 1"], v["mark 2"]])
+    app.logger.info(f"games_list: {games_list}")
     return render_template('matches.html')
 
 if __name__ == "__main__":
