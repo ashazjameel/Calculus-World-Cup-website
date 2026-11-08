@@ -32,14 +32,14 @@ function add_entry(name_1, name_2, score_1, score_2) {
     name2.classList.toggle("name-right");
 
     const score1 = document.createElement("span");
-    const score2 = document.createElement("span");
     const dash = document.createElement("span");
+    const score2 = document.createElement("span");
     score1.innerText = score_1;
-    score2.innerText = score_2;
     dash.innerText = "-";
+    score2.innerText = score_2;
     score_div.appendChild(score1);
-    score_div.appendChild(score2);
     score_div.appendChild(dash);
+    score_div.appendChild(score2);
     score1.classList.toggle("name-left");
     score2.classList.toggle("name-right");
 }
