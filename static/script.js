@@ -40,6 +40,6 @@ function add_entry(name_1, name_2, score_1, score_2) {
     score_div.appendChild(score1);
     score_div.appendChild(dash);
     score_div.appendChild(score2);
-    score1.classList.toggle("name-left");
-    score2.classList.toggle("name-right");
+    score1.classList.toggle("score-left");
+    score2.classList.toggle("score-right");
 }
